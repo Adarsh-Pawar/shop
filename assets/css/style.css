@@ -36,7 +36,7 @@ h6 {
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
-#preloader {
+/* #preloader {
   position: fixed;
   top: 0;
   left: 0;
@@ -68,6 +68,45 @@ h6 {
 
   100% {
     transform: rotate(360deg);
+  }
+} */
+
+#preloader {
+  display: block;
+  --height-of-loader: 4px;
+  --loader-color: #0071e2;
+  width: 130px;
+  height: var(--height-of-loader);
+  border-radius: 30px;
+  background: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+#preloader::before {
+  content: "";
+  position: absolute;
+  background: var(--loader-color);
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border-radius: 30px;
+  animation: moving 1s ease-in-out infinite;
+}
+
+@keyframes moving {
+  50% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0;
+    right: 0;
+    left: unset;
   }
 }
 
@@ -111,6 +150,7 @@ h6 {
   transition: all 0.5s;
   z-index: 997;
   padding: 15px 0;
+  display: none;
 }
 
 #header.header-scrolled,
@@ -381,6 +421,10 @@ h6 {
   visibility: visible !important;
 }
 
+#main {
+  display: none;
+}
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -389,6 +433,7 @@ h6 {
   height: 85vh;
   /* background: #37517e; */
   background: linear-gradient(rgba(105, 101, 57, 0.9), rgba(105, 101, 57, 0.9)), url("../img/mainShop1.jpg") center no-repeat;
+  display: none;
 }
 
 #hero .container {
@@ -458,10 +503,6 @@ h6 {
     height: 100vh;
     text-align: center;
     background: linear-gradient(rgba(105, 101, 57, 0.9), rgba(105, 101, 57, 0.9)), url("../img/mainMobile\ \(2\).jpg") center no-repeat;
-  }
-
-  #hero .animated {
-    animation: none;
   }
 
   #hero .hero-img {
@@ -984,7 +1025,7 @@ section {
 }
 
 .portfolio .portfolio-item .portfolio-info {
-  opacity: 0;
+  opacity: 1;
   position: absolute;
   left: 15px;
   bottom: 0;
@@ -1646,6 +1687,7 @@ section {
 #footer {
   font-size: 14px;
   background: #37517e;
+  display: none;
 }
 
 #footer .footer-newsletter {
