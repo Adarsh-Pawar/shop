@@ -155,8 +155,13 @@
   if (preloader) {
     window.addEventListener('load', () => {
       setTimeout(() => {
+        select('#main').style.opacity = 1;
+        select('#header').style.display = 'block';
+        select('#footer').style.display = 'block';
+        select('#hero').style.display = 'block';
+        select('#hero').classList.add('d-flex');
         preloader.remove();
-      }, 2000);
+      }, 1000);
     });
   }
 
