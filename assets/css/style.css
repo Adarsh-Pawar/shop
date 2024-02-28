@@ -6,12 +6,19 @@
 * License: https://bootstrapmade.com/license/
 */
 
+@font-face {
+  font-family: nohemi;
+  src: url('/assets/fonts/nohemi-regular.woff');
+}
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: #444444;
+  background-color: #ffffff;
+background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
 }
 
 a {
@@ -111,18 +118,38 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Homepage
+--------------------------------------------------------------*/
+
+#homepage{
+  opacity: 0;
+}
+.homepage{
+  background: linear-gradient(rgba(105, 101, 57, 0.6), rgba(105, 101, 57, 0.8)), url("../img/mainShop1.jpg") center no-repeat;
+  background-size: cover;
+}
+
+/*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
 #header {
   transition: all 0.5s;
   z-index: 997;
   padding: 15px 0;
-  display: none;
+  opacity: 0;
+  height: 10vh;
+  /* background: rgba(105, 101, 57, 0.9); */
 }
 
 #header.header-scrolled,
 #header.header-inner-pages {
   background: rgba(105, 101, 57, 0.9);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  /* background: rgba(105, 101, 57, 0.9); */
 }
 
 #header .logo {
@@ -141,6 +168,27 @@ h6 {
 
 #header .logo img {
   max-height: 40px;
+}
+
+
+@media (max-width: 768px) {
+  #header .logo {
+    font-size: 24px;
+  }
+
+  @media (max-width: 991px) {
+    #header .logo{
+      font-size: 26px;
+    }
+  }
+
+  @media (max-width: 575px) {
+    #header .logo {
+      font-size: 18px;
+    }
+    
+  }
+  
 }
 
 /*--------------------------------------------------------------
@@ -171,7 +219,7 @@ h6 {
   align-items: center;
   justify-content: space-between;
   padding: 10px 0 10px 30px;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 500;
   color: #fff;
   white-space: nowrap;
@@ -189,7 +237,7 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #FFD369;
+  color: #47b2e4;
 }
 
 .navbar .getstarted,
@@ -309,9 +357,10 @@ h6 {
   right: 0;
   left: 0;
   bottom: 0;
-  background:rgba(105, 101, 57, 0.9);;
+  background:rgba(105, 101, 57, 0.9);
   transition: 0.3s;
-  z-index: 999;
+  z-index: 1;
+  opacity: 1;
 }
 
 .navbar-mobile .mobile-nav-toggle {
@@ -331,8 +380,23 @@ h6 {
   border-radius: 10px;
   background-color: #fff;
   overflow-y: auto;
-  transition: 0.3s;
+  /* transition: nav 0.3s ease;  */
+  animation: nav .3s ease-in-out;
 }
+
+
+@keyframes nav {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+
+
 
 .navbar-mobile a,
 .navbar-mobile a:focus {
@@ -344,7 +408,7 @@ h6 {
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #FFD369;
+  color: #47b2e4;
 }
 
 .navbar-mobile .getstarted,
@@ -393,10 +457,12 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 85vh;
+  /* height: 85vh; */
+  height: 90vh;
   /* background: #37517e; */
-  background: linear-gradient(rgba(105, 101, 57, 0.7), rgba(105, 101, 57, 0.8)), url("../img/mainShop1.jpg") center no-repeat;
-  display: none;
+  
+  /* background: linear-gradient(rgba(64, 103, 158, 0.7), rgba(64, 103, 158, 0.8)), url("../img/mainShop1.jpg") center no-repeat; */
+  opacity: 0;
 }
 
 #hero .container {
@@ -408,7 +474,7 @@ h6 {
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
-  color: #F5E8DD;
+  color: #F3F8FF;
 }
 
 #hero h2 {
@@ -465,7 +531,7 @@ h6 {
   #hero {
     height: 100vh;
     text-align: center;
-    background: linear-gradient(rgba(105, 101, 57, 0.9), rgba(105, 101, 57, 0.9)), url("../img/mainMobile\ \(2\).jpg") center no-repeat;
+    background: linear-gradient(rgba(105, 101, 57, 0.7), rgba(105, 101, 57, 0.8)), url("../img/mainMobile\ \(2\).jpg") center no-repeat;
   }
 
   #hero .hero-img {
@@ -479,7 +545,7 @@ h6 {
 
 @media (max-width: 768px) {
   #hero {
-    background: linear-gradient(rgba(105, 101, 57, 0.9), rgba(105, 101, 57, 0.9)), url("../img/mainMobile\ \(4\).jpg") center no-repeat;
+    background: linear-gradient(rgba(105, 101, 57, 0.7), rgba(105, 101, 57, 0.8)), url("../img/mainMobile\ \(4\).jpg") center no-repeat;
   }
   #hero h1 {
     font-size: 28px;
@@ -499,7 +565,7 @@ h6 {
 
 @media (max-width: 575px) {
   #hero {
-    background: linear-gradient(rgba(105, 101, 57, 0.9), rgba(105, 101, 57, 0.9)), url("../img/mainMobile\ \(5\).jpg") center no-repeat;
+    background: linear-gradient(rgba(105, 101, 57, 0.7), rgba(105, 101, 57, 0.8)), url("../img/mainMobile\ \(5\).jpg") center no-repeat;
   }
   #hero .hero-img img {
     width: 80%;
@@ -1157,7 +1223,7 @@ section {
 #footer {
   font-size: 14px;
   background: #37517e;
-  display: none;
+  opacity: 0;
 }
 
 #footer .footer-newsletter {

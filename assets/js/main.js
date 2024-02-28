@@ -156,12 +156,12 @@
     window.addEventListener('load', () => {
       setTimeout(() => {
         select('#main').style.opacity = 1;
-        select('#header').style.display = 'block';
-        select('#footer').style.display = 'block';
-        select('#hero').style.display = 'block';
-        select('#hero').classList.add('d-flex');
+        select('#homepage').style.opacity = 1;
+        select('#header').style.opacity = 1;
+        select('#footer').style.opacity = 1;
+        select('#hero').style.opacity = 1;
         preloader.remove();
-      }, 1000);
+      }, 800);
     });
   }
 
@@ -250,7 +250,7 @@
     AOS.init({
       duration: 1000,
       easing: "ease-in-out",
-      once: true,
+      once: false,
       mirror: false
     });
   });
