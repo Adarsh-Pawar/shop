@@ -154,14 +154,12 @@
   let preloader = select('#preloader');
   if (preloader) {
     window.addEventListener('load', () => {
-      setTimeout(() => {
         select('#main').style.opacity = 1;
         select('#homepage').style.opacity = 1;
         select('#header').style.opacity = 1;
         select('#footer').style.opacity = 1;
         select('#hero').style.opacity = 1;
         preloader.remove();
-      }, 800);
     });
   }
 
