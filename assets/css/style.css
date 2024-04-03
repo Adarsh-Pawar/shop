@@ -123,8 +123,10 @@ h6 {
   opacity: 0;
 }
 .homepage{
-  background: linear-gradient(rgba(105, 101, 57, 0.6), rgba(105, 101, 57, 0.8)), url("../img/mainShop1.jpg") center no-repeat;
-  background-size: cover;
+  /* background: linear-gradient(rgba(105, 101, 57, 0.6), rgba(105, 101, 57, 0.8)), url("../img/mainShop1.jpg") center no-repeat;
+  background-size: cover; */
+  background: #C0D6E8;
+  /* background: rgb(105, 101, 57); */
 }
 
 /*--------------------------------------------------------------
@@ -464,7 +466,7 @@ h6 {
 }
 
 #hero .container {
-  padding-top: 72px;
+  max-width: 95%;
 }
 
 #hero h1 {
@@ -472,13 +474,18 @@ h6 {
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
-  color: #F3F8FF;
+  /* color: #F3F8FF; */
+  color: #FBF8DD;
 }
 
 #hero h2 {
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 50px;
   font-size: 24px;
+}
+
+#hero #element {
+  color: #FFD369;
 }
 
 #hero .btn-get-started {
@@ -529,7 +536,8 @@ h6 {
   #hero {
     height: 100vh;
     text-align: center;
-    background: linear-gradient(rgba(105, 101, 57, 0.7), rgba(105, 101, 57, 0.8)), url("../img/mainMobile\ \(2\).jpg") center no-repeat;
+    /* background: linear-gradient(rgba(105, 101, 57, 0.7), rgba(105, 101, 57, 0.8)), url("../img/mainMobile\ \(2\).jpg") center no-repeat; */
+    color: #C0D6E8;
   }
 
   #hero .hero-img {
@@ -543,7 +551,8 @@ h6 {
 
 @media (max-width: 768px) {
   #hero {
-    background: linear-gradient(rgba(105, 101, 57, 0.7), rgba(105, 101, 57, 0.8)), url("../img/mainMobile\ \(4\).jpg") center no-repeat;
+    /* background: linear-gradient(rgba(105, 101, 57, 0.7), rgba(105, 101, 57, 0.8)), url("../img/mainMobile\ \(4\).jpg") center no-repeat; */
+    color: #C0D6E8;
   }
   #hero h1 {
     font-size: 28px;
@@ -563,7 +572,8 @@ h6 {
 
 @media (max-width: 575px) {
   #hero {
-    background: linear-gradient(rgba(105, 101, 57, 0.7), rgba(105, 101, 57, 0.8)), url("../img/mainMobile\ \(5\).jpg") center no-repeat;
+    /* background: linear-gradient(rgba(105, 101, 57, 0.7), rgba(105, 101, 57, 0.8)), url("../img/mainMobile\ \(5\).jpg") center no-repeat; */
+    color: #C0D6E8;
   }
   #hero .hero-img img {
     width: 80%;

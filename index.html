@@ -72,8 +72,9 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-          <h1>Daily Household Products At One Shop</h1>
-          <h2>We sell all homecare products and laundry essentials.</h2>
+          <h1>One stop destination for your daily household products.</h1>
+          <!-- <h2>We sell all homecare products and laundry essentials.</h2> -->
+          <h2>We sell <span id="element"></span></h2>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
           <img src="assets/img/products.png" class="img-fluid animated" alt="">
@@ -451,6 +452,17 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+  <!-- Setup and start animation! -->
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Laundry Chemicals.', 'Household Cleansing Products.', 'Personal Hygiene Products.'],
+      typeSpeed: 50,
+      loop: true,
+      backSpeed: 25,
+    });
+  </script>
 </body>
 
 </html>
