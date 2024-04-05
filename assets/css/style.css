@@ -114,13 +114,13 @@ h6 {
 # Homepage
 --------------------------------------------------------------*/
 
-#homepage{
+/* #homepage{
   opacity: 0;
 }
 .homepage{
   background-color: #FFFFEC;
   background-image: url("https://www.transparenttextures.com/patterns/white-diamond.png");
-}
+} */
 
 /*--------------------------------------------------------------
 # Header
@@ -130,20 +130,15 @@ h6 {
   z-index: 997;
   padding: 15px 0;
   opacity: 0;
-  height: 10vh;
+  /* height: 10vh; */
   /* background: rgba(105, 101, 57, 0.9); */
+  background-color: #FFFFEC;
+  background-image: url("https://www.transparenttextures.com/patterns/white-diamond.png");
 }
 
 #header.header-scrolled,
 #header.header-inner-pages {
   background: rgba(255, 255, 236, 0.9);
-  /* background: rgba(251, 243, 213, 0.8); */
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-  /* background: rgba(105, 101, 57, 0.9); */
 }
 
 #header .logo {
@@ -450,16 +445,14 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  /* height: 85vh; */
-  height: 90vh;
-  /* background: #37517e; */
-  
-  /* background: linear-gradient(rgba(64, 103, 158, 0.7), rgba(64, 103, 158, 0.8)), url("../img/mainShop1.jpg") center no-repeat; */
+  height: 100dvh;
+  background-color: #FFFFEC;
   opacity: 0;
 }
 
 #hero .container {
   max-width: 95%;
+  padding-top: 72px;
 }
 
 #hero h1 {
@@ -467,13 +460,13 @@ h6 {
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
-  /* color: #F3F8FF; */
-  color: #FFC94A;
+  /* color: #FFC94A; */
+  color: #494103;
 }
 
 #hero h2 {
   /* color: #47b2e4; */
-  color: #FFD369;
+  color: #494103;
   margin-bottom: 50px;
   font-size: 24px;
   font-weight: 700;
@@ -488,53 +481,13 @@ h6 {
   color: #47b2e4;
 }
 
-#hero .btn-get-started {
-  font-family: "Jost", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 10px 28px 11px 28px;
-  border-radius: 50px;
-  transition: 0.5s;
-  margin: 10px 0 0 0;
-  color: #fff;
-  background: #47b2e4;
-}
-
-#hero .btn-get-started:hover {
-  background: #209dd8;
-}
-
-#hero .btn-watch-video {
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  transition: 0.5s;
-  margin: 10px 0 0 25px;
-  color: #fff;
-  line-height: 1;
-}
-
-#hero .btn-watch-video i {
-  line-height: 0;
-  color: #fff;
-  font-size: 32px;
-  transition: 0.3s;
-  margin-right: 8px;
-}
-
-#hero .btn-watch-video:hover i {
-  color: #47b2e4;
-}
-
 #hero .animated {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
 
 @media (max-width: 991px) {
   #hero {
-    height: 100vh;
+    height: 100dvh;
     text-align: center;
     /* background: linear-gradient(rgba(105, 101, 57, 0.7), rgba(105, 101, 57, 0.8)), url("../img/mainMobile\ \(2\).jpg") center no-repeat; */
     color: #C0D6E8;
