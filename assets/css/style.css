@@ -9,6 +9,7 @@ html {
 body {
   font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: #444444;
+  background-image: url("../img/white-diamond.png");
 }
 
 a {
@@ -122,7 +123,7 @@ a:hover {
   /* height: 10vh; */
   /* background: rgba(105, 101, 57, 0.9); */
   background-color: #FFFFEC;
-  background-image: url("https://www.transparenttextures.com/patterns/white-diamond.png");
+  background-image: url("../img/white-diamond.png");
 }
 
 #header.header-scrolled,
@@ -434,9 +435,10 @@ a:hover {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 100dvh;
+  height: 100vh;
   background-color: #FFFFEC;
   opacity: 0;
+  background-image: url("../img/white-diamond.png");
 }
 
 #hero .container {
@@ -475,9 +477,8 @@ a:hover {
 
 @media (max-width: 991px) {
   #hero {
-    height: 100dvh;
+    height: 100vh;
     text-align: center;
-    /* background: linear-gradient(rgba(105, 101, 57, 0.7), rgba(105, 101, 57, 0.8)), url("../img/mainMobile\ \(2\).jpg") center no-repeat; */
     color: #C0D6E8;
   }
 
@@ -492,7 +493,6 @@ a:hover {
 
 @media (max-width: 768px) {
   #hero {
-    /* background: linear-gradient(rgba(105, 101, 57, 0.7), rgba(105, 101, 57, 0.8)), url("../img/mainMobile\ \(4\).jpg") center no-repeat; */
     color: #C0D6E8;
   }
   #hero h1 {
@@ -513,7 +513,6 @@ a:hover {
 
 @media (max-width: 575px) {
   #hero {
-    /* background: linear-gradient(rgba(105, 101, 57, 0.7), rgba(105, 101, 57, 0.8)), url("../img/mainMobile\ \(5\).jpg") center no-repeat; */
     color: #C0D6E8;
   }
   #hero .hero-img img {
@@ -546,11 +545,11 @@ a:hover {
 section {
   padding: 60px 0;
   overflow: hidden;
-  background-image: url("https://www.transparenttextures.com/patterns/white-diamond.png");
 }
 
 .section-bg {
   background-color: #f3f5fa;
+  background-image: url("../img/white-diamond.png");
 }
 
 .section-title {
@@ -650,17 +649,22 @@ section {
                21px 21px 42px #bababa;  
 }
 
-
 @media (max-width: 768px) {
   #about img {
-    width: 100%;
+    width: 85%;
     height: 400px;
   }
 
-  #about .content > div {
-    padding: 0px;
+  #about .content div:first-child {
+   display: flex;
+    justify-content: center;
   }
-  
+}
+
+@media (max-width: 575px) {
+  #about img {
+    width: 100%;
+  }
 }
 
 /*--------------------------------------------------------------
